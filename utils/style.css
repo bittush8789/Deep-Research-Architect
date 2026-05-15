@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif !important;
+}
+
+.stApp {
+    background-color: #ffffff;
+    color: #1e293b;
+}
+
+/* Typography */
+h1 {
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    letter-spacing: -1px;
+}
+
+h2, h3, h4, h5, h6 {
+    color: #334155 !important;
+    font-weight: 600 !important;
+}
+
+/* Sidebar Styling */
+[data-testid="stSidebar"] {
+    background-color: #f8fafc !important;
+    border-right: 1px solid #e2e8f0;
+}
+
+/* Fix Sidebar Navigation Text */
+[data-testid="stSidebarNav"] span {
+    color: #0f172a !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+}
+
+[data-testid="stSidebarNav"] a:hover {
+    background-color: #f1f5f9 !important;
+    border-radius: 8px !important;
+}
+
+/* Fix Active Tab in Sidebar */
+[data-testid="stSidebarNav"] a[aria-current="page"] {
+    background-color: #e2e8f0 !important;
+    border-radius: 8px !important;
+}
+
+/* Logo & Badge Styling */
+[data-testid="stSidebar"] img {
+    background-color: transparent !important;
+    border-radius: 12px;
+}
+
+/* Special Case for the logo with checkerboard - Force white background */
+[data-testid="stSidebar"] [data-testid="stImage"] img {
+    background-color: white !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 10px;
+}
+
+/* Form Container */
+[data-testid="stForm"] {
+    background-color: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 20px !important;
+    padding: 2.5rem !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+/* Label Colors - CRITICAL FIX */
+[data-testid="stWidgetLabel"] p {
+    color: #1e293b !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+}
+
+/* Inputs */
+.stTextInput>div>div>input, .stSelectbox>div>div>div, .stNumberInput>div>div>input, .stTextArea>div>div>textarea {
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 12px !important;
+    color: #1e293b !important;
+    padding: 12px !important;
+    transition: all 0.2s ease;
+}
+
+/* Buttons - COMPLETE REWRITE FOR VISIBILITY */
+.stButton button, [data-testid="baseButton-formSubmit"], button {
+    background-color: #4f46e5 !important; /* Bright Indigo for better visibility */
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Force text color for all elements inside buttons */
+.stButton button *, [data-testid="baseButton-formSubmit"] *, button * {
+    color: #ffffff !important;
+}
+
+/* Handle secondary buttons */
+[data-testid="baseButton-secondary"] {
+    background-color: #0f172a !important;
+    color: #ffffff !important;
+}
+
+.stButton button:hover, [data-testid="baseButton-formSubmit"]:hover {
+    background-color: #4338ca !important;
+    box-shadow: 0 8px 15px rgba(79, 70, 229, 0.3) !important;
+    transform: translateY(-1px);
+}
+
+/* Metric & Expander */
+[data-testid="stMetricValue"] {
+    color: #0f172a !important;
+}
+
+[data-testid="stExpander"] {
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 12px !important;
+    background-color: #ffffff !important;
+}
+
+/* Hide Streamlit Elements */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+[data-testid="stHeader"] {display: none;}
+[data-testid="stToolbar"] {display: none;}
+.stDeployButton {display: none;}
